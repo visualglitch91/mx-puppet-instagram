@@ -1,5 +1,16 @@
-config.yaml
-instagram-registration.yaml
+docs
 node_modules
 build
-*.db
+test.js
+registration.yaml
+.nyc_output
+*.log*
+*-audit.json
+coverage/
+test-results.xml
+
+# Makefile
+.yarn.*
+.prepare
+CHANGELOG-draft.md
+mx-puppet-bridge.tgz

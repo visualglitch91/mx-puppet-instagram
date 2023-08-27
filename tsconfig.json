@@ -1,17 +1,19 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "target": "es2016",
-        "noImplicitAny": false,
-        "inlineSourceMap": true,
-        "outDir": "./build",
-        "types": ["node"],
-        "strictNullChecks": true,
-        "allowSyntheticDefaultImports": true
-    },
-    "compileOnSave": true,
-    "include": [
-        "src/**/*",
-    ]
+	"compilerOptions": {
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"target": "ES2022",
+		"noImplicitAny": false,
+		"declaration": true,
+		"outDir": "./build",
+		"types": ["node"],
+		"strictNullChecks": true,
+		"allowSyntheticDefaultImports": true,
+		"incremental": true,
+		"sourceMap": true,
+		"allowJs": false,
+		"skipDefaultLibCheck": true
+	},
+	"compileOnSave": true,
+	"include": ["src/**/*", "test/**/*"]
 }

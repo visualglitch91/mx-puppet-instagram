@@ -1,36 +1,58 @@
 {
-  "name": "mx-puppet-instagram",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc",
-    "lint": "tslint --project ./tsconfig.json -t stylish",
-    "start": "npm run-script build && node ./build/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Sorunome",
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Sorunome/mx-puppet-instagram.git"
-  },
-  "dependencies": {
-    "command-line-args": "^5.1.1",
-    "command-line-usage": "^5.0.5",
-    "escape-html": "^1.0.3",
-    "events": "^3.1.0",
-    "instagram-private-api": "^1.43.3",
-    "jimp": "^0.10.1",
-    "js-yaml": "^3.13.1",
-    "lodash": "^4.17.20",
-    "mx-puppet-bridge": "^0.1.4",
-    "node-html-parser": "^1.2.14",
-    "tough-cookie": "^3.0.1",
-    "tslint": "^5.20.1",
-    "typescript": "^3.8.3"
-  },
-  "devDependencies": {
-    "@types/node": "^12.12.34"
-  }
+	"name": "@mx-puppet/bridge",
+	"version": "0.1.8",
+	"description": "Matrix Puppeting Bridge library",
+	"repository": {
+		"type": "git",
+		"url": "git+https://gitlab.com/mx-puppet/mx-puppet-bridge"
+	},
+	"bugs": {
+		"url": "https://gitlab.com/mx-puppet/mx-puppet-bridge/issues"
+	},
+	"main": "./lib/src/index.js",
+	"scripts": {
+		"prepublishOnly": "npm run build",
+		"lint": "prettier --check src && eslint src",
+		"lint-fix": "prettier --write src && eslint --fix src",
+		"build": "tsc"
+	},
+	"author": "Sorunome",
+	"maintainers": [
+		{
+			"email": "daniel@sonck.nl",
+			"name": "Daniel Sonck",
+			"url": "https://daniel.sonck.nl"
+		}
+	],
+	"publishConfig": {
+		"registry": "https://gitlab.com/api/v4/projects/35712047/packages/npm/"
+	},
+	"files": [
+		"src/**/*",
+		"lib/src/**/*"
+	],
+	"dependencies": {
+		"command-line-args": "^5.2.1",
+		"command-line-usage": "^7.0.1",
+		"escape-html": "^1.0.3",
+		"events": "^3.3.0",
+		"express": "^4.18.2",
+		"instagram-private-api": "^1.45.3",
+		"jimp": "^0.22.10",
+		"lodash": "^4.17.21",
+		"mx-puppet-bridge": "^0.1.6",
+		"tough-cookie": "^4.1.3"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^6.4.1",
+		"@typescript-eslint/parser": "^6.4.1",
+		"eslint": "^8.48.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-prettier": "^5.0.0",
+		"prettier": "^3.0.2",
+		"typescript": "^4.6.4"
+	},
+	"resolutions": {
+		"ts-custom-error": "3.3.1"
+	}
 }
